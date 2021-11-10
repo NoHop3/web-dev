@@ -1,2 +1,2 @@
 # web-dev
-All web development applications at this repo
+A dumpster for my webpages, practices, examples and exercises
