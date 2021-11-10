@@ -1,0 +1,249 @@
+/* Common for all pages */
+/* Stefan Georgiev */
+* {
+  margin: 0;
+  padding: 0;
+}
+body,
+html {
+  height: 100%;
+}
+
+/* Using viewport properties to cover the whole screen */
+.wapper {
+  background-image: url(../images/backgroundimage2.jpg);
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+}
+
+.navbar {
+  width: 100%;
+}
+
+.main {
+  color: floralwhite;
+  font-size: 2rem;
+}
+
+.navbar ul li {
+  margin-right: 10px;
+}
+
+.navbar ul li button a {
+  font-size: 1.8rem;
+}
+
+/* Dead zone in which Bootstrap nav bar is not exactly toggling (as it toggles on 576) so the buttons are shrinking and it is ugly */
+
+@media (max-width: 731px) {
+  .navbar ul li {
+    margin-right: 0;
+  }
+  .navbar ul li button a {
+    font-size: 1rem;
+  }
+}
+
+.navbar-nav button a {
+  text-decoration: none;
+  color: blanchedalmond;
+}
+/* Animation for site "logo" */
+
+@keyframes changeColor {
+  0% {
+    color: lightskyblue;
+  }
+  25% {
+    color: limegreen;
+  }
+  50% {
+    color: #0055c59f;
+  }
+  100% {
+    color: orange;
+  }
+}
+
+#shiny {
+  animation: changeColor 3s;
+  animation-iteration-count: infinite;
+}
+
+/* Index.html */
+/* Each team member */
+
+.container-xl-fluid {
+  height: 80%;
+}
+.container-xl-fluid .row {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 50%;
+}
+.column {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px dotted gray;
+  border-collapse: collapse;
+}
+.column .content {
+  color: aliceblue;
+  font: 3rem sans-serif;
+}
+
+/* about.html */
+/* Stefan Georgiev */
+
+@media only screen and (max-width: 600px) {
+  .container1 {
+    display: inline;
+  }
+  .section2,
+  .section3 {
+    width: 100%;
+  }
+  .footer ul li h5 {
+    font-size: 0.6rem;
+  }
+}
+
+@media only screen and (min-width: 731px) {
+  .container1 {
+    display: flex;
+  }
+  .section2 {
+    height: 40%;
+    width: 50%;
+  }
+
+  .section3 {
+    height: 50%;
+    width: 50%;
+  }
+
+  .footer ul li h5 {
+    font-size: 1rem;
+  }
+}
+
+/* Below properties are in rem so no need to put them in media @frameworks */
+.section2 h2 {
+  font-size: 1.2rem;
+  color: orange;
+  text-align: center;
+}
+.section2 h2 a {
+  text-decoration: none;
+  color: lightskyblue;
+}
+
+.section2 img,
+.section3 img {
+  width: 100%;
+  height: 50%;
+  width: 100%;
+  height: 50%;
+}
+
+.section3 table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.section3 th,
+td {
+  border: 0.1rem solid white;
+  text-align: left;
+  padding: 0.4rem;
+}
+.section3 table thead {
+  font-size: 1rem;
+  color: lightskyblue;
+}
+.section3 table tbody {
+  font-size: 0.95rem;
+  color: orange;
+}
+
+/* devteam.html */
+/* Stefan Georgiev & Florin Plaesu */
+
+.container-fluid {
+  color: azure;
+}
+
+/* Making some breakpoints */
+@media (min-width: 577px) {
+  .container-fluid {
+    height: 100%;
+  }
+  /* Display flex on both row and below col so all rows have columns next to each other and all columns have pictures and text next to each other */
+  .container-fluid .row-fluid {
+    text-align: center;
+    display: flex;
+  }
+  .container-fluid .row-fluid .col {
+    display: flex;
+  }
+  p {
+    font-size: 1.8rem;
+  }
+
+  .container-fluid img {
+    height: 100%;
+    width: 50%;
+  }
+}
+/* Making some breakpoints */
+@media (max-width: 576px) {
+  .container-fluid img {
+    height: 50%;
+    width: 50%;
+  }
+  .container-fluid .row-fluid {
+    display: inline;
+    font-size: 1rem;
+  }
+}
+
+/* projects.html */
+/* Jerry */
+
+.carousel-inner img {
+  height: 50%;
+}
+
+/* Footer */
+/* Pierantonio & Ione */
+
+.footer {
+  height: 3%;
+  width: 100%;
+  background-color: rgba(128, 128, 128, 0.3);
+  position: fixed;
+  bottom: 0px;
+}
+.footer ul {
+  display: flex;
+  color: aliceblue;
+}
+.footer ul li {
+  list-style: none;
+}
+.footer #rightFooter {
+  position: absolute;
+  left: 65%;
+}
