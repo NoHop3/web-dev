@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.wrapper {
+  background: url(./images/server-hosting.jpg) no-repeat center/cover fixed;
+  min-height: 760px;
+}
+header {
+  width: 100%;
+  padding-top: 2%;
+}
+.main {
+  color: #fff;
+  font-size: 1.2rem;
+  float: left;
+  font-weight: 600;
+  margin-left: 5%;
+}
+nav {
+  float: right;
+  margin-right: 5%;
+}
+nav li {
+  display: inline;
+  padding: 1.5rem;
+}
+
+nav li a {
+  color: #fff;
+  list-style: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+nav li a:hover {
+  color: red;
+  border-bottom: 2px solid red;
+  font-family: cursive;
+  transition: all 0.5s ease-in;
+  padding: 15px 0;
+}
+.section {
+  padding-top: 200px;
+  text-align: center;
+  color: #fff;
+}
+.section p {
+  margin: 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.section h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.section button {
+  text-transform: uppercase;
+  margin: 8%;
+  padding: 15px 17px;
+  color: #fff;
+  background-color: transparent;
+  border-radius: 40px;
+  border: 2px solid #fff;
+}
+.section button:hover {
+  border: none;
+}
+
+.search {
+  margin: 3%;
+  font-family: sans-serif;
+  justify-content: center;
+  align-items: center;
+  margin: 150px;
+}
+.left {
+  display: inline-block;
+  font-size: 2rem;
+  text-align: center;
+}
+#input {
+  width: 20rem;
+}
+.right {
+  display: inline-block;
+  font-size: 1.5rem;
+  text-align: center;
+}
+#pricing {
+  background-color: gray;
+  color: #fff;
+  padding: 1rem;
+}
+.ul li {
+  padding: 0.8rem;
+  border-bottom: 2px solid lightgreen;
+  background-color: #fff;
+}
+.ul {
+  color: #555;
+  margin: 4%;
+  padding: 0;
+  width: 100%;
+  list-style: none;
+  text-align: center;
+}
+
+.box {
+  padding: 0.8rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+#bg {
+  background-color: rgba(33, 33, 33, 0.8);
+  font-size: 2.3rem;
+}
+#head {
+  background-color: black;
+  color: #fff;
+  font-size: 2rem;
+}
+#head2 {
+  color: #fff;
+  background-color: green;
+  font-size: 2rem;
+}
+#head3 {
+  color: #fff;
+  background-color: red;
+  font-size: 2rem;
+}
+.btn_price {
+  padding: 5%;
+  width: 60%;
+  text-transform: uppercase;
+  font-size: 1rem;
+  background-color: darkgreen;
+}
+#btn_submit {
+  width: 10%;
+  padding: 1.3rem;
+  font-size: 1.2rem;
+  border-radius: 20px;
+  border: 2px solid black;
+}
+footer {
+  border-top: 6px solid black;
+  text-align: center;
+  background-color: lightblue;
+}
