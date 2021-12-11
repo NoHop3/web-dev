@@ -1,19 +1,76 @@
-const clrAccent = "#16e0bd";
-const clrLight = "fff";
-const clrDark = "#303030";
+// const clrAccent = "#16e0bd";
+// const clrLight = "fff";
+// const clrDark = "#303030";
 
-var taskToAdd = document.querySelector(".input__task");
-var addBtn = document.querySelector(".addBtn");
-var removeBtn = document.querySelector(".removeBtn");
-var removeAllBtn = document.querySelector(".removeAllBtn");
-
-
-// Add a task func
-function displayText() {
-    console.log(taskToAdd.value);
+// Delete a task func
+let remove = document.getElementsByClassName("removeBtn");
+for (let i = 0; i < remove.length; i++) {
+    remove[i].onclick = function () {
+        let div = this.parentElement;
+        div.style.display = "none";
+    }
 }
 
-// Complete a task func
-function completeTask() {
-    
+//Check task from task list
+let list = document.querySelector("ul");
+list.addEventListener(
+  "click",
+  function (ev) {
+    if (ev.target.tagName === "LI") {
+      ev.target.classList.toggle("checked");
+    }
+  },
+  false
+);
+
+//Remove all
+function removeAll() {
+    let array = document.getElementsByClassName("task__list--item");
+    for (let i = 0; i < array.length; i++) {
+        array[i].style.display="none";
+    }
+}
+
+// Add a task func
+function addTask() {
+    let li = document.createElement("li");
+    li.classList.add("task__list--item");
+    // let completeBtn = document.createElement("button");
+    // let txt = document.createTextNode("✓");
+    // completeBtn.className = "completeBtn";
+    // completeBtn.appendChild(txt);
+    // li.appendChild(completeBtn);
+
+    let inputValue = document.getElementById("add__section--input").value;
+    let t = document.createTextNode(inputValue);
+    let paraT = document.createElement("P");
+    paraT.classList.add("task");
+    paraT.appendChild(t);
+    li.appendChild(paraT);
+    if(inputValue === ''){
+        alert("You must write a title");
+    }
+    else{
+        document.getElementById("task__list").appendChild(li);
+    }
+    document.getElementById("add__section--input").value = "";
+
+    // var span = document.createElement("SPAN");
+    // var txt = document.createTextNode("X");
+    // span.className = "close";
+    // span.appendChild(txt);
+    // li.appendChild(span);
+
+    let removeBtn = document.createElement("BUTTON");
+    let txt = document.createTextNode("✗");
+    removeBtn.classList.add("removeBtn");
+    removeBtn.appendChild(txt);
+    li.appendChild(removeBtn);
+
+    for (let i = 0; i < remove.length; i++) {
+      remove[i].onclick = function () {
+        let div = this.parentElement;
+        div.style.display = "none";
+      };
+    }
 }

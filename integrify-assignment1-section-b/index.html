@@ -17,26 +17,35 @@
         <h2 class="add__section--title">Task Management</h2>
         <div class="add__section--input">
           <input
-            class="add__section--input input__task"
+            
+            id = "add__section--input"
             type="text"
             placeholder="Title..."
           />
-          <input class="addBtn" type="button" value="Add" onclick="displayText()">
+          <input class="addBtn" type="button" value="Add" onclick="addTask()" >
         </div>
       </section>
       <section class="task__section">
         <div class="task__section task">
-          <button class="completeBtn"><strong>✓</strong></button>
-          <p class="task__title" ><strong>Go through DataFlair's JavaScript tutorials</strong></p>
-          <button class="removeBtn"><strong>✗</strong></button>
+          
+          <ul id="task__list" >
+            <li class="task__list--item">
+              <p class="task">Go through DataFlair's JavaScript tutorials</p>
+              <button class="removeBtn">✗</button>
+          </li>
+          <li class="task__list--item">
+              <p class="task">Make a better task list exercise</p>
+              <button class="removeBtn">✗</button>
+          </li>
+          </ul>
         </div>
       </section>
       <section class="remove__section">
-        <button class="removeAllBtn">Remove all</button>
+        <button class="removeAllBtn" onclick="removeAll()">Remove all</button>
         <h2 class="errorLabel"></h2>
       </section>
     </section>
-  <script src="/js/script..js"></script>
+  <script defer src="/js/script..js"></script>
   </body>
   
 </html>
