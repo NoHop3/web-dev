@@ -23,6 +23,17 @@ list.addEventListener(
   false
 );
 
+let taask = document.getElementsByClassName("task");
+for (let index = 0; index < taask.length; index++) {
+  taask[index].addEventListener(
+    "click",
+    function () {
+      taask[index].classList.toggle("checked");
+    }
+  )
+}
+
+
 //Remove all
 function removeAll() {
     let array = document.getElementsByClassName("task__list--item");
@@ -71,6 +82,13 @@ function addTask() {
       remove[i].onclick = function () {
         let div = this.parentElement;
         div.style.display = "none";
+      };
+    }
+
+    let taskClassArray = document.getElementsByClassName("task");
+    for (let index = 0; index < taskClassArray.length; index++) {
+      taskClassArray[index].onclick = function () {
+        taskClassArray[index].classList.toggle("checked");
       };
     }
 }

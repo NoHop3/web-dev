@@ -151,9 +151,11 @@ input[type=button] {
     grid-area: "task list";
     grid-row: 2;
     width: 65%;
+    
 }
 .task{
     font-weight: 700;
+    text-decoration: none;
 }
 
 
@@ -161,8 +163,11 @@ input[type=button] {
     list-style: none;
 }
 .task__list--item{
+    width: 150%;
     font-size: var(--fs-body);
-    display: flex;
+    display: inline-grid;
+  grid-template-columns: 80% 45%;
+  grid-gap: 3px;
 }
 .removeBtn{
 
@@ -171,7 +176,12 @@ input[type=button] {
     border: none;
 }
 
+
 ul li.checked p{
+    color: var(--clr-accent);
+    text-decoration: line-through;
+}
+p.checked{
     color: var(--clr-accent);
     text-decoration: line-through;
 }
